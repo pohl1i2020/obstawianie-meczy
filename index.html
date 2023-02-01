@@ -4,49 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Document</title>
-    <script src="main.js" defer></script>
 </head>
 <body>
-    <form action="#">
-        <label for="gosp"
-            >Gospodarze
-            <select name="" id="gosp">
-                <option value="Polska">Polska</option>
-                <option value="Argentyna" selected>Argentyna</option>
-                <option value="Dania">Dania</option>
-            </select>
-        </label>
-        <label for="gosc"
-            >Goście
-            <select name="" id="gosc">
-                <option value="USA">USA</option>
-                <option value="Meksyk">Meksyk</option>
-                <option value="Iran">Iran</option>
-            </select>
-        </label>
+    <fieldset>
         <fieldset>
-            <legend>Dogrywka</legend>
-            <label for="dogrT"
-                >jest <input type="radio" name="dogr" value="będzie dogrywka" id="dogrT" checked
-            /></label>
-            <label for="dogrF"
-                >brak <input type="radio" name="dogr" id="dogrF" value="nie będzie dogrywki"
-            /></label>
+            <legend>
+                Podstawowe dane
+            </legend>
+            <label for="Name">Nazwa elementu:
+                <select name="" id="name">
+                    <optgroup   label="podstawowe">                    
+                        <option value="p1"> p1 </option>
+                        <option value="h1"> h1 </option>
+                        <option value="h2"> h2 </option>
+                        <option value="h3"> h3 </option>
+                        <option value="h4"> h4 </option>
+                        <option value="h5"> h5 </option>
+                        <option value="h6"> h6 </option>
+                     </optgroup>
+                        <optgroup label="znaczniki sekcji">
+                    <option value="div"> div </option>
+                    <option value="header"> header </option>
+                    <option value="main"> main </option>
+                    <option value="aside"> aside </option>
+                    <option value="section"> section </option>
+                    <option value="article"> article </option>
+                    <option value="footer"> footer </option>
+                        </optgroup>
+                </select>
+            </label>
+            <label for="text">Tekst w elemencie:
+                <input type="text">
+            </label>
+            <label for="data">Data w elemencie:
+                <input type="date">
+            </label>
         </fieldset>
         <fieldset>
-            <legend>Dodatki</legend>
-            <label for="yCard"
-                >Żółta kartka? <input type="checkbox" name="dod" id="yCard" value="żółta kartka"/></label
-            ><label for="rCard" 
-                >Czerwona kartka?
-                <input type="checkbox" name="dod" id="rCard" value="czerwona kartka"/></label
-            ><label for="pen"
-                >Karny? <input type="checkbox" name="dod" id="pen" value="karny"
-            /></label>
+            <legend>
+                Formatowanie bloku
+            </legend>
+            <label for="padding">Padding w elemencie: 0rem
+            <input type="range" id="padding" min="0" max="1" step="0.1"> 1rem
+        </label>
+            <label for="maringes">Margines elementu: 0rem
+            <input type="range" id="margines" min="0" max="1" step="0.1"> 1rem
+            </label>
+
         </fieldset>
-        <input type="submit" /><input type="reset" />
-    </form>
-    <div id="display"></div>
+        <fieldset>
+            <legend>
+                Kolory
+            </legend>
+            <label for="color">Kolor czcionki:
+                <input type="color" id="color">
+            </label>
+            <label for="colorbg">Kolor tła elementu:
+                <input type="color" id="color2">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Formatowanie tekstu
+            </legend>
+            <fieldset>
+                <legend>
+                    Odległość między literami(rem):
+                </legend>
+                <label for="odleglosc">
+                    <input type="number" value="0" min="0" max="1" step="0.1">rem
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    wyrównanie tekstu
+                </legend>
+                <label for="lewa">lewa:
+                    <input type="radio" name="wyrownanie" value="lewa" checked>
+                </label>
+                <label for="środek">środek:
+                    <input type="radio" name="wyrownanie" value="środek">
+                </label>
+                <label for="prawa">prawa:
+                    <input type="radio" name="wyrownanie" value="prawa">
+                </label>
+            </fieldset>
+        </fieldset>
+    </fieldset>
+    
 </body>
 </html>
